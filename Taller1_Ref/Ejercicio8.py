@@ -37,4 +37,5 @@ def dividir_dulces():
     
     input("\nPresiona Enter para continuar...")
 
-dividir_dulces()
+if __name__ == "__main__":
+    dividir_dulces()

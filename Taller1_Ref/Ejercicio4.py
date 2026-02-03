@@ -35,3 +35,6 @@ def ejercicio_comprar_gaseosa():
     print(f"Precio gaseosa: ${precio_gaseosa}\nPago: ${pago_billete}\nCambio: ${cambio}")
     input("Presiona Enter para continuar...")
     
+if __name__ == "__main__":
+    ejercicio_comprar_gaseosa()
+    

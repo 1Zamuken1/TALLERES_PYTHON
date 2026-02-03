@@ -17,3 +17,6 @@ def convertir_grados_C_a_F():
     print(f"Temperatura en °C: {temperatura_C}\nTemperatura en °F: {F}")
     input("Presiona Enter para continuar...")
     
+if __name__ == "__main__":
+    convertir_grados_C_a_F()
+    

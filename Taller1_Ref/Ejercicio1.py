@@ -32,3 +32,7 @@ def ejercicio_suma_edades():
     suma = edad1 + edad2
     print(f"\nLa suma total de las edades es: {suma} años")
     input("\nPresiona Enter para continuar...")
+
+
+if __name__ == "__main__":
+    ejercicio_suma_edades()

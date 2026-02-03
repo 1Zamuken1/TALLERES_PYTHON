@@ -45,3 +45,5 @@ def compra_tres_alimentos():
     print(f"Precio Empanada: ${precio_empanada}\nPrecio Jugo: ${precio_jugo}\nPrecio Barra de Cereal: ${precio_barra_cereal}")
     input("Presiona Enter para continuar...")
     
+if __name__ == "__main__":
+    compra_tres_alimentos()

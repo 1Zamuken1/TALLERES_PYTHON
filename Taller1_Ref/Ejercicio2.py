@@ -28,3 +28,6 @@ def promedio_temperaturas():
     promedio_total = (temperatura_manana + temperatura_tarde + temperatura_noche) / 3
     print(f"\nEl promedio de la temperatura del día es de: {promedio_total}C°")
     input("Presiona Enter para continuar...")
+
+if __name__ == "__main__":
+    promedio_temperaturas()

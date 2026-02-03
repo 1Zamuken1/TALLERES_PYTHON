@@ -24,3 +24,7 @@ def dividir_cuenta():
     print(f"Número de campistas: {numero_campistas}")
     print(f"Cada campista debe pagar: ${pago_por_persona:.2f}")
     input("\nPresiona Enter para continuar...")
+
+if __name__ == "__main__":
+    dividir_cuenta()
+    

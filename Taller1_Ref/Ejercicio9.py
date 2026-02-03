@@ -39,3 +39,7 @@ def calcular_imc():
     imc = peso / (estatura ** 2)
     print(f"Peso: {peso}kg\nEstatura: {estatura}m\nTu IMC es: {imc:.2f}")
     input("\nPresiona Enter para continuar...")
+    
+if __name__ == "__main__":
+    calcular_imc()
+    

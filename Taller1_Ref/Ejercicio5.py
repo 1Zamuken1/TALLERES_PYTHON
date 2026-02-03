@@ -43,3 +43,6 @@ def kilometros_caminados():
     suma_kilometros = kilometros_manana + kilometros_tarde + kilometros_noche
     print(f"El total de la cantidad caminada es de {suma_kilometros}Km")
     input("Presiona Enter para continuar...")
+    
+if __name__ == "__main__":
+    kilometros_caminados()

@@ -33,3 +33,5 @@ def dividir_litros_agua():
     print(f"La cantidad de agua correspondiente a cada campista es de {agua_por_campista} Litros")
     input("Presiona Enter para continuar...")
     
+if __name__ == "__main__":
+    dividir_litros_agua()
