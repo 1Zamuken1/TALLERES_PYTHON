@@ -1,6 +1,12 @@
 def consulta_saldo(datos_cuenta):
     """
-    Función para consultar saldo de cuenta
+    Consulta el saldo de una cuenta bancaria tras verificar el número de cuenta.
+    
+    Args:
+        datos_cuenta (dict): Diccionario con información de la cuenta que contiene:
+            - 'numero_cuenta' (int): Número de cuenta asociado
+            - 'nombre' (str): Nombre del titular
+            - 'saldo' (float): Saldo actual de la cuenta
     """
     print("╔══════════════════════════════════════╗")
     print("║           CONSULTA SALDO             ║")
@@ -22,7 +28,13 @@ def consulta_saldo(datos_cuenta):
 
 def retiro_cuenta(datos_cuenta):
     """
-    Realiza la deduccion del saldo tras validar fondos suficientes.
+    Realiza un retiro de dinero de la cuenta bancaria tras validar el número de cuenta y fondos suficientes.
+    Decrementa el saldo del diccionario de datos de la cuenta.
+    
+    Args:
+        datos_cuenta (dict): Diccionario con información de la cuenta que contiene:
+            - 'numero_cuenta' (int): Número de cuenta asociado
+            - 'saldo' (float): Saldo actual de la cuenta
     """
     print("╔══════════════════════════════════════╗")
     print("║           RETIRO DE CUENTA           ║")
@@ -52,7 +64,13 @@ def retiro_cuenta(datos_cuenta):
         
 def consignacion_cuenta(datos_cuenta):
     """
-    Suma el monto ingresado al saldo actual en el diccionario.
+    Realiza una consignación o depósito de dinero en la cuenta bancaria tras validar el número de cuenta.
+    Incrementa el saldo del diccionario de datos de la cuenta.
+    
+    Args:
+        datos_cuenta (dict): Diccionario con información de la cuenta que contiene:
+            - 'numero_cuenta' (int): Número de cuenta asociado
+            - 'saldo' (float): Saldo actual de la cuenta
     """
     print("╔══════════════════════════════════════╗")
     print("║       CONSIGNACIÓN DE CUENTA         ║")

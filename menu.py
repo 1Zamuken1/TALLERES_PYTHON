@@ -92,7 +92,7 @@ def diseno_menu_taller_2():
     Imprime la interfáz visual del menú en ASCII
     """
     print("╔═════════════════════════════════════════════════╗")
-    print("║           TALLER 2 - CICLO FOR Y WHILE          ║")
+    print("║           TALLER 2 - CUENTA BANCARIA            ║")
     print("╠═════════════════════════════════════════════════╣")
     print("║  1. Saludo de bienvenida                        ║")
     print("║  2. Consulta de saldo de cuenta                 ║")
@@ -138,6 +138,21 @@ def ejecutar_menu_taller_2():
         else:
             print("Opción no válida. Intenta de nuevo.")
             input("Presiona Enter para continuar...")
+
+def diseno_menu_taller_for_y_while():
+    """
+    Imprime la interfáz visual del menú en ASCII
+    """
+    print("╔═════════════════════════════════════════════════╗")
+    print("║           TALLER 2 - CICLO FOR & WHILE          ║")
+    print("╠═════════════════════════════════════════════════╣")
+    print("║  1. Sumar pares del 1 al 100                    ║")
+    print("║  2. Consulta de saldo de cuenta                 ║")
+    print("║  3. Retiro de cuenta                            ║")
+    print("║  4. Consignación de cuenta                      ║")
+    print("╠═════════════════════════════════════════════════╣")
+    print("║  5. Regresar                                    ║")
+    print("╚═════════════════════════════════════════════════╝")
             
 def ejecutar_menu_principal():
     """
