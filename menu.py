@@ -1,3 +1,4 @@
+# Imports Taller 1
 from Taller1_Ref.Ejercicio1 import ejercicio_suma_edades
 from Taller1_Ref.Ejercicio2 import promedio_temperaturas
 from Taller1_Ref.Ejercicio3 import dividir_litros_agua
@@ -9,12 +10,29 @@ from Taller1_Ref.Ejercicio8 import dividir_dulces
 from Taller1_Ref.Ejercicio9 import calcular_imc
 from Taller1_Ref.Ejercicio10 import dividir_cuenta
 
-def diseno_menu():
+# Imports Taller 2
+from cuenta_bancaria.saludo import saludo_bienvenida
+from cuenta_bancaria.menu_cuenta import consulta_saldo, retiro_cuenta, consignacion_cuenta
+
+def diseno_menu_principal():
+    """
+    Imprime el menú principal de talleres
+    """
+    print("╔════════════════════════════════════╗")
+    print("║    TALLERES PYTHON                 ║")
+    print("╠════════════════════════════════════╣")
+    print("║  1. Taller 1 - Variables           ║")
+    print("║  2. Taller 2 - Ciclo for y While   ║")
+    print("╠════════════════════════════════════╣")
+    print("║  0. Salir                          ║")
+    print("╚════════════════════════════════════╝")
+
+def diseno_menu_taller_1():
     """
     Imprime la interfáz visual del menú en ASCII
     """
     print("╔════════════════════════════════════╗")
-    print("║     TALLER PYTHON - VARIABLES      ║")
+    print("║     TALLER 1 - VARIABLES           ║")
     print("╠════════════════════════════════════╣")
     print("║  1. Suma de edades                 ║")
     print("║  2. Promedio de temperaturas       ║")
@@ -27,19 +45,17 @@ def diseno_menu():
     print("║  9. Cálculo de IMC                 ║")
     print("║ 10. División de cuenta             ║")
     print("╠════════════════════════════════════╣")
-    print("║  0. Salir                          ║")
+    print("║  0. Regresar                       ║")
     print("╚════════════════════════════════════╝")
     
 def ejecutar_menu_taller_1():
     """ 
     Controlador lógico que administra el acceso a los ejercicios del Taller 1 en base a las entradas del usuario.
     En caso de Ejecutar una opción no existente o letra; el programa regresará al menú al detectar una opción no válida.
-    Si el usuario ingresa "0", el programa finalizará su ejecución.
+    Si el usuario ingresa "0", regresará al menú principal.
     """
     
     # Diccionario que permita acceder a los ejercicios
-    # Refactorizado para evitar crear nuevas opciones en match más adelante
-    
     menu_ejercicios = {
         "1": ejercicio_suma_edades,
         "2": promedio_temperaturas,
@@ -53,12 +69,11 @@ def ejecutar_menu_taller_1():
         "10": dividir_cuenta,
     }
 
-
     while True:
-        diseno_menu()
+        diseno_menu_taller_1()
         opcion = input("Selecciona una opción: ")
         if opcion == "0":
-            print("Saliendo del programa...")
+            print("Regresando al menú principal...")
             break
         
         # Obtener función del diccionario
@@ -72,6 +87,85 @@ def ejecutar_menu_taller_1():
             print("Opción no válida. Intenta de nuevo.")
             input("Presiona Enter para continuar...")
             
+def diseno_menu_taller_2():
+    """
+    Imprime la interfáz visual del menú en ASCII
+    """
+    print("╔═════════════════════════════════════════════════╗")
+    print("║           TALLER 2 - CICLO FOR Y WHILE          ║")
+    print("╠═════════════════════════════════════════════════╣")
+    print("║  1. Saludo de bienvenida                        ║")
+    print("║  2. Consulta de saldo de cuenta                 ║")
+    print("║  3. Retiro de cuenta                            ║")
+    print("║  4. Consignación de cuenta                      ║")
+    print("╠═════════════════════════════════════════════════╣")
+    print("║  5. Regresar                                    ║")
+    print("╚═════════════════════════════════════════════════╝")
+
+def ejecutar_menu_taller_2():
+    """
+    Controlador lógico que administra el acceso a los ejercicios del Taller 2 en base a las entradas del usuario.
+    En caso de Ejecutar una opción no existente o letra; el programa regresará al menú al detectar una opción no válida.
+    Si el usuario ingresa "0", regresará al menú principal.
+    """
+    
+    datos_cuenta = {
+        "numero_cuenta" : "123456789",
+        "nombre" : "Juan Barrios",
+        "saldo" : 1000.0,
+    }
+    
+    menu_ejercicios = {
+        "1": saludo_bienvenida,
+        "2": consulta_saldo,
+        "3": retiro_cuenta,
+        "4": consignacion_cuenta,
+    }
+
+    while True:
+        diseno_menu_taller_2()
+        opcion = input("Selecciona una opción: ")
+        if opcion == "5":
+            print("Regresando al menú principal...")
+            break
+        
+        # Obtener función del diccionario
+        opcion_menu = menu_ejercicios.get(opcion)
+        
+        if opcion_menu:
+            # Llamar a la función correspondiente contenida en opcion_menu
+            opcion_menu(datos_cuenta)  # Pasar datos_cuenta como argumento a las funciones del taller 2
+        else:
+            print("Opción no válida. Intenta de nuevo.")
+            input("Presiona Enter para continuar...")
+            
+def ejecutar_menu_principal():
+    """
+    Controlador lógico del menú principal que gestiona el acceso a los diferentes talleres.
+    """
+    menu_talleres = {
+        "1": ejecutar_menu_taller_1,
+        "2": ejecutar_menu_taller_2,
+    }
+    
+    while True:
+        diseno_menu_principal()
+        opcion = input("Selecciona una opción: ")
+        
+        if opcion == "0":
+            print("Saliendo del programa...")
+            break
+        
+        # Obtener función del diccionario
+        opcion_menu = menu_talleres.get(opcion)
+        
+        if opcion_menu:
+            # Llamar a la función correspondiente del taller
+            opcion_menu()
+        else:
+            print("Opción no válida. Intenta de nuevo.")
+            input("Presiona Enter para continuar...")
+            
 # Para iniciar el programa
 if __name__ == "__main__":
-    ejecutar_menu_taller_1()
+    ejecutar_menu_principal()
