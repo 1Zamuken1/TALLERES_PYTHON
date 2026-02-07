@@ -14,6 +14,29 @@ from Taller1_Ref.Ejercicio10 import dividir_cuenta
 from cuenta_bancaria.saludo import saludo_bienvenida
 from cuenta_bancaria.menu_cuenta import consulta_saldo, retiro_cuenta, consignacion_cuenta
 
+# Imports Taller 2 - Ciclo For y While
+from Taller2_while_for.Ejercicio1 import ejercicio_suma_pares
+from Taller2_while_for.Ejercicio2 import ejercicio_numeros_impares
+from Taller2_while_for.Ejercicio3 import ejercicio_dias_entre_citas
+from Taller2_while_for.Ejercicio4 import ejercicio_estudiantes_computadores
+from Taller2_while_for.Ejercicio5 import ejercicio_contar_palabras
+from Taller2_while_for.Ejercicio6 import ejercicio_numeros_primos
+from Taller2_while_for.Ejercicio7 import ejercicio_calculadora_completa
+from Taller2_while_for.Ejercicio8 import ejercicio_productos_familia
+from Taller2_while_for.Ejercicio9 import ejercicio_torneo_futbol
+from Taller2_while_for.Ejercicio10 import ejercicio_contar_vocales_consonantes
+from Taller2_while_for.Ejercicio11 import ejercicio_numeros_impares_usuario
+from Taller2_while_for.Ejercicio12 import ejercicio_numero_secreto
+from Taller2_while_for.Ejercicio13 import ejercicio_invertir_palabra
+from Taller2_while_for.Ejercicio14 import ejercicio_cuadrados
+from Taller2_while_for.Ejercicio15 import ejercicio_personaje_historico
+from Taller2_while_for.Ejercicio16 import ejercicio_elementos_quimicos
+from Taller2_while_for.Ejercicio17 import ejercicio_formatos_pelicula
+from Taller2_while_for.Ejercicio18 import ejercicio_agencia_modelaje
+from Taller2_while_for.Ejercicio19 import ejercicio_funcion_matematica
+from Taller2_while_for.Ejercicio20 import ejercicio_cambio_dolares
+from Taller2_while_for.Ejercicio21 import ejercicio_goles_jugadores
+
 def diseno_menu_principal():
     """
     Imprime el menú principal de talleres
@@ -22,7 +45,8 @@ def diseno_menu_principal():
     print("║    TALLERES PYTHON                 ║")
     print("╠════════════════════════════════════╣")
     print("║  1. Taller 1 - Variables           ║")
-    print("║  2. Taller 2 - Ciclo for y While   ║")
+    print("║  2. Taller 2 - Cuenta Bancaria     ║")
+    print("║  3. Taller 2 - Ciclo for y While   ║")
     print("╠════════════════════════════════════╣")
     print("║  0. Salir                          ║")
     print("╚════════════════════════════════════╝")
@@ -168,9 +192,57 @@ def diseno_menu_taller_for_y_while():
     print("║  20. Cambiar 100 dólares                         ║")
     print("║  21. Partido de footbal de 5 jugadores           ║")
     print("╠══════════════════════════════════════════════════╣")
-    print("║  5. Regresar                                     ║")
+    print("║  0. Regresar                                     ║")
     print("╚══════════════════════════════════════════════════╝")
             
+def ejecutar_menu_taller_for_y_while():
+    """ 
+    Controlador lógico que administra el acceso a los ejercicios del Taller 2 - Ciclo For y While en base a las entradas del usuario.
+    En caso de Ejecutar una opción no existente o letra; el programa regresará al menú al detectar una opción no válida.
+    Si el usuario ingresa "0", regresará al menú principal.
+    """
+    
+    # Diccionario que permita acceder a los ejercicios
+    menu_ejercicios = {
+        "1": ejercicio_suma_pares,
+        "2": ejercicio_numeros_impares,
+        "3": ejercicio_dias_entre_citas,
+        "4": ejercicio_estudiantes_computadores,
+        "5": ejercicio_contar_palabras,
+        "6": ejercicio_numeros_primos,
+        "7": ejercicio_calculadora_completa,
+        "8": ejercicio_productos_familia,
+        "9": ejercicio_torneo_futbol,
+        "10": ejercicio_contar_vocales_consonantes,
+        "11": ejercicio_numeros_impares_usuario,
+        "12": ejercicio_numero_secreto,
+        "13": ejercicio_invertir_palabra,
+        "14": ejercicio_cuadrados,
+        "15": ejercicio_personaje_historico,
+        "16": ejercicio_elementos_quimicos,
+        "17": ejercicio_formatos_pelicula,
+        "18": ejercicio_agencia_modelaje,
+        "19": ejercicio_funcion_matematica,
+        "20": ejercicio_cambio_dolares,
+        "21": ejercicio_goles_jugadores,        
+    }
+    
+    while True:
+        diseno_menu_taller_for_y_while()
+        opcion = input("Selecciona una opción: ")
+        if opcion == "0":
+            print("Regresando al menú principal...")
+            break
+        
+        # Obtener función del diccionario
+        opcion_menu = menu_ejercicios.get(opcion)
+        
+        if opcion_menu:
+            # Llamar a la función correspondiente contenida en opcion_menu
+            opcion_menu()
+        else:
+            print("Opción no válida. Intenta de nuevo.")
+            input("Presiona Enter para continuar...")
 def ejecutar_menu_principal():
     """
     Controlador lógico del menú principal que gestiona el acceso a los diferentes talleres.
@@ -178,6 +250,7 @@ def ejecutar_menu_principal():
     menu_talleres = {
         "1": ejecutar_menu_taller_1,
         "2": ejecutar_menu_taller_2,
+        "3": ejecutar_menu_taller_for_y_while,
     }
     
     while True:
