@@ -48,15 +48,26 @@ Ejercicios que practican el uso de bucles y estructuras de repetición:
 
 ## Cómo ejecutar el programa
 
-### Paso 1: Abre tu terminal/símbolo del sistema
 - En Windows: Presiona `Win + R`, escribe `cmd` y presiona Enter
-- En Mac/Linux: Abre la terminal desde aplicaciones
-
-### Paso 2: Navega a la carpeta del proyecto
+### Paso 3: Ejecuta el programa
 ```
+python main.py
+```
+- En Mac/Linux: Abre la terminal desde aplicaciones
+║  1. Taller 1 - Variables           ║
+║  2. Taller 2 - Cuenta Bancaria     ║
+║  3. Taller 2 - Ciclo for y While   ║
+║  4. Ejercicio Hotel                 ║
 cd ruta/donde/esta/el/proyecto
 ```
 
+
+### Acceder directamente al ejercicio Hotel
+Si deseas acceder directamente al sistema de gestión del hotel desde la raíz del proyecto, ejecuta:
+```
+python -m Hotel.Ejercicio22
+```
+o desde el menú principal selecciona la opción `4` (Ejercicio Hotel).
 Ejemplo:
 ```
 cd C:\Users\TuUsuario\Downloads\Talleres_Python
@@ -72,6 +83,16 @@ python menu.py
 ## Cómo usar el programa
 
 Una vez ejecutes `python menu.py`, verás un menú principal con 3 opciones:
+├── Hotel/                  # Sistema de gestión hotelera (Ejercicio 22)
+│   ├── __init__.py
+│   ├── Ejercicio22.py
+│   ├── main.py
+│   ├── reservas.py
+│   ├── autenticacion.py
+│   ├── reportes.py
+│   ├── calculos.py
+│   └── habitaciones.py
+│   └── validaciones.py
 
 ### Menú Principal
 ```

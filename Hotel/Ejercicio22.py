@@ -8,13 +8,7 @@ Este archivo actua como wrapper para importar y ejecutar el sistema
 completo que esta modularizado en el directorio Ejercicio22_Hotel/.
 """
 
-import sys
-import os
-
-# Agregar el directorio del hotel al path para poder importar
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'Ejercicio22_Hotel'))
-
-from main import sistema_hotel_main
+from Hotel.main import sistema_hotel_main
 
 
 def ejercicio_sistema_hotel():

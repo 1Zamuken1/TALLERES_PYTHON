@@ -17,8 +17,8 @@ Autor: Sistema de Gestion Hotelera
 Version: 1.0.0
 """
 
-from reservas import crear_reservacion
-from autenticacion import sistema_login
+from .reservas import crear_reservacion
+from .autenticacion import sistema_login
 
 
 def limpiar_pantalla():
@@ -45,13 +45,13 @@ def mostrar_menu_principal():
     Returns:
         None
     """
-    print("\n=======================================")
-    print("SISTEMA DE GESTION DE HOTEL")
-    print("=======================================")
-    print("1. Realizar nueva reservacion")
-    print("2. Ingresar al sistema (Login)")
-    print("3. Salir")
-    print("=======================================")
+    print("╔════════════════════════════════════╗")
+    print("║    SISTEMA DE GESTION DE HOTEL     ║")
+    print("╠════════════════════════════════════╣")
+    print("║  1. Realizar nueva reservacion     ║")
+    print("║  2. Ingresar al sistema (Login)    ║")
+    print("║  3. Salir                          ║")
+    print("╚════════════════════════════════════╝")
 
 
 def sistema_hotel_main():

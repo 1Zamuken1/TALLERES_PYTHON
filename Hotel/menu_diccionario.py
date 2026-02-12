@@ -1,26 +1,27 @@
-# Importar los ejercicios
-from Ejercicio1 import ejercicio_suma_pares
-from Ejercicio2 import ejercicio_numeros_impares
-from Ejercicio3 import ejercicio_dias_entre_citas
-from Ejercicio4 import ejercicio_estudiantes_computadores
-from Ejercicio5 import ejercicio_contar_palabras
-from Ejercicio6 import ejercicio_numeros_primos
-from Ejercicio7 import ejercicio_calculadora_completa
-from Ejercicio8 import ejercicio_productos_familia
-from Ejercicio9 import ejercicio_torneo_futbol
-from Ejercicio10 import ejercicio_contar_vocales_consonantes
-from Ejercicio11 import ejercicio_numeros_impares_usuario
-from Ejercicio12 import ejercicio_numero_secreto
-from Ejercicio13 import ejercicio_invertir_palabra
-from Ejercicio14 import ejercicio_cuadrados
-from Ejercicio15 import ejercicio_personaje_historico
-from Ejercicio16 import ejercicio_elementos_quimicos
-from Ejercicio17 import ejercicio_formatos_pelicula
-from Ejercicio18 import ejercicio_agencia_modelaje
-from Ejercicio19 import ejercicio_funcion_matematica
-from Ejercicio20 import ejercicio_cambio_dolares
-from Ejercicio21 import ejercicio_goles_jugadores
-from Ejercicio22 import ejercicio_sistema_hotel
+# Importar los ejercicios del Taller2 (ubicados en Taller2_while_for)
+from Taller2_while_for.Ejercicio1 import ejercicio_suma_pares
+from Taller2_while_for.Ejercicio2 import ejercicio_numeros_impares
+from Taller2_while_for.Ejercicio3 import ejercicio_dias_entre_citas
+from Taller2_while_for.Ejercicio4 import ejercicio_estudiantes_computadores
+from Taller2_while_for.Ejercicio5 import ejercicio_contar_palabras
+from Taller2_while_for.Ejercicio6 import ejercicio_numeros_primos
+from Taller2_while_for.Ejercicio7 import ejercicio_calculadora_completa
+from Taller2_while_for.Ejercicio8 import ejercicio_productos_familia
+from Taller2_while_for.Ejercicio9 import ejercicio_torneo_futbol
+from Taller2_while_for.Ejercicio10 import ejercicio_contar_vocales_consonantes
+from Taller2_while_for.Ejercicio11 import ejercicio_numeros_impares_usuario
+from Taller2_while_for.Ejercicio12 import ejercicio_numero_secreto
+from Taller2_while_for.Ejercicio13 import ejercicio_invertir_palabra
+from Taller2_while_for.Ejercicio14 import ejercicio_cuadrados
+from Taller2_while_for.Ejercicio15 import ejercicio_personaje_historico
+from Taller2_while_for.Ejercicio16 import ejercicio_elementos_quimicos
+from Taller2_while_for.Ejercicio17 import ejercicio_formatos_pelicula
+from Taller2_while_for.Ejercicio18 import ejercicio_agencia_modelaje
+from Taller2_while_for.Ejercicio19 import ejercicio_funcion_matematica
+from Taller2_while_for.Ejercicio20 import ejercicio_cambio_dolares
+from Taller2_while_for.Ejercicio21 import ejercicio_goles_jugadores
+# Ejercicio 22 pertenece al paquete Hotel
+from Hotel.Ejercicio22 import ejercicio_sistema_hotel
 
 # Diccionario que permite acceder a los ejercicios
 menu_ejercicios = {

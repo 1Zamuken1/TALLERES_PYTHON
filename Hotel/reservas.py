@@ -8,10 +8,10 @@ Principio SOLID aplicado:
 """
 
 from datetime import datetime
-from validaciones import (validar_entero, validar_si_no, validar_fecha, 
+from .validaciones import (validar_entero, validar_si_no, validar_fecha, 
                          validar_tipo_habitacion, validar_texto_no_vacio)
-from calculos import calcular_noches, calcular_total, generar_codigo_ticket
-from habitaciones import (obtener_habitacion_disponible, liberar_habitacion,
+from .calculos import calcular_noches, calcular_total, generar_codigo_ticket
+from .habitaciones import (obtener_habitacion_disponible, liberar_habitacion,
                          mostrar_disponibilidad, hay_habitaciones_disponibles)
 
 
@@ -50,9 +50,9 @@ def crear_reservacion():
         Reserva completada con exito!
         Codigo de Ticket: HTL-890-3456
     """
-    print("=======================================")
-    print("NUEVA RESERVACION DEL HOTEL")
-    print("=======================================")
+    print("╔════════════════════════════════════╗")
+    print("║    NUEVA RESERVACION DEL HOTEL     ║")
+    print("╚════════════════════════════════════╝")
     
     # Captura de datos personales
     # Se usa .lower() para normalizar los nombres como indica el ejercicio
@@ -132,9 +132,9 @@ def crear_reservacion():
     reservas_db.append(nueva_reserva)
     
     # Confirmacion
-    print("\n=======================================")
-    print("RESERVA COMPLETADA CON EXITO!")
-    print("=======================================")
+    print("\n╔════════════════════════════════════╗")
+    print("║  RESERVA COMPLETADA CON EXITO!     ║")
+    print("╚════════════════════════════════════╝")
     print(f"Codigo de Ticket: {codigo}")
     print(f"Habitacion: {num_habitacion}")
     print(f"Total a pagar: ${total_pagar:,}")

@@ -52,7 +52,7 @@ Principio SOLID aplicado:
 """
 
 from tabulate import tabulate
-from reservas import obtener_todas_reservas
+from .reservas import obtener_todas_reservas
 
 
 def generar_informe_general():
@@ -92,9 +92,9 @@ def generar_informe_general():
     """
     reservas = obtener_todas_reservas()
     
-    print("\n=======================================")
-    print("INFORME GENERAL DE RESERVAS")
-    print("=======================================")
+    print("╔════════════════════════════════════╗")
+    print("║    INFORME GENERAL DE RESERVAS     ║")
+    print("╚════════════════════════════════════╝")
     
     if not reservas:
         print("No hay reservas registradas en el sistema.")
@@ -152,9 +152,9 @@ def mostrar_ticket(reserva):
         =======================================
         [Detalles de la reserva en formato tabla]
     """
-    print("\n=======================================")
-    print("TICKET DE RESERVA")
-    print("=======================================")
+    print("╔════════════════════════════════════╗")
+    print("║          TICKET DE RESERVA         ║")
+    print("╚════════════════════════════════════╝")
     
     # Preparar datos para mostrar
     datos = [
@@ -196,11 +196,11 @@ def generar_informe_detallado(reserva):
     Returns:
         None: Imprime directamente en consola
     """
-    from calculos import calcular_desglose_costos
+    from .calculos import calcular_desglose_costos
     
-    print("\n=======================================")
-    print("INFORME DETALLADO DE RESERVA")
-    print("=======================================")
+    print("╔════════════════════════════════════╗")
+    print("║     INFORME DETALLADO DE RESERVA   ║")
+    print("╚════════════════════════════════════╝")
     
     # Informacion general
     info_general = [
@@ -261,9 +261,9 @@ def generar_resumen_estadistico():
         print("No hay datos para generar estadisticas.")
         return
     
-    print("\n=======================================")
-    print("ESTADISTICAS DEL HOTEL")
-    print("=======================================")
+    print("╔════════════════════════════════════╗")
+    print("║        ESTADISTICAS DEL HOTEL      ║")
+    print("╚════════════════════════════════════╝")
     
     # Calcular metricas
     total_reservas = len(reservas)

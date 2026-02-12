@@ -7,9 +7,9 @@ Principio SOLID aplicado:
 - Interface Segregation: Menus separados para usuarios y administradores
 """
 
-from reservas import buscar_reserva_por_id, cancelar_reserva
-from reportes import mostrar_ticket, generar_informe_general, generar_informe_detallado, generar_resumen_estadistico
-from validaciones import validar_si_no
+from .reservas import buscar_reserva_por_id, cancelar_reserva
+from .reportes import mostrar_ticket, generar_informe_general, generar_informe_detallado, generar_resumen_estadistico
+from .validaciones import validar_si_no
 
 
 # Credenciales hardcodeadas del administrador
@@ -49,9 +49,9 @@ def sistema_login():
         Contrasena: 1234567890
         [Accede al menu de usuario]
     """
-    print("\n=======================================")
-    print("SISTEMA DE LOGIN")
-    print("=======================================")
+    print("╔════════════════════════════════════╗")
+    print("║            SISTEMA DE LOGIN        ║")
+    print("╚════════════════════════════════════╝")
     
     usuario = input("Usuario / ID: ").strip()
     contrasena = input("Contrasena: ").strip()
@@ -106,9 +106,9 @@ def menu_usuario(reserva):
         Seleccione una opcion: 1
     """
     while True:
-        print("\n=======================================")
-        print("MENU DE USUARIO")
-        print("=======================================")
+        print("╔════════════════════════════════════╗")
+        print("║             MENU DE USUARIO        ║")
+        print("╚════════════════════════════════════╝")
         print(f"Cliente: {reserva['nombre_completo'].title()}")
         print(f"Codigo: {reserva['codigo']}")
         print("---------------------------------------")
@@ -175,9 +175,9 @@ def menu_admin():
         Seleccione una opcion: 1
     """
     while True:
-        print("\n=======================================")
-        print("MENU DE ADMINISTRADOR")
-        print("=======================================")
+        print("╔════════════════════════════════════╗")
+        print("║          MENU DE ADMINISTRADOR     ║")
+        print("╚════════════════════════════════════╝")
         print("1. Informe general de reservas")
         print("2. Buscar reserva por codigo")
         print("3. Estadisticas del hotel")
@@ -191,7 +191,7 @@ def menu_admin():
             input("\nPresiona Enter para continuar...")
             
         elif opcion == "2":
-            from reservas import buscar_reserva_por_codigo
+            from .reservas import buscar_reserva_por_codigo
             codigo = input("\nIngrese el codigo de reserva: ").strip()
             reserva = buscar_reserva_por_codigo(codigo)
             
