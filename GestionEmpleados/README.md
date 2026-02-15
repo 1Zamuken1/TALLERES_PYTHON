@@ -4,7 +4,7 @@ Este módulo implementa un gestión completa de Recursos Humanos utilizando Pyth
 
 ## 1. Arquitectura de Datos y Persistencia (CRUD)
 
-El sistema utiliza **Diccionarios de Python en memoria** como base de datos principal para operaciones rápidas, y **Archivos de Texto (.txt)** para persistencia.
+El sistema utiliza **Diccionarios de Python en memoria** como base de datos principal para operaciones rápidas, y **Archivos JSON (.json)** para persistencia (que son texto estructurado).
 
 ### Estructura de Datos
 
@@ -39,7 +39,7 @@ El sistema utiliza **Diccionarios de Python en memoria** como base de datos prin
   - El sistema de reportes está abierto a extensión (podríamos agregar `ReportePDFStrategy`) sin modificar el código que llama a la generación del reporte, gracias al patrón Strategy.
 
 - **D - Dependency Inversion (Inversión de Dependencias)**:
-  - Los servicios y vistas dependen de abstracciones (Repositorios) y no directamente de los archivos de texto. Si cambiáramos los .txt por una base de datos SQL en el Repositorio, el resto del sistema seguiría funcionando sin cambios.
+  - Los servicios y vistas dependen de abstracciones (Repositorios) y no directamente de los archivos JSON. Si cambiáramos los .json por una base de datos SQL en el Repositorio, el resto del sistema seguiría funcionando sin cambios.
 
 ---
 

@@ -96,13 +96,6 @@
         }
     },
     "empleados": {
-        "1001": {
-            "documento": "1001",
-            "nombre": "juan perez 5",
-            "celular": "3001234567",
-            "correo": "juan.perez@empresa.com",
-            "cargo": "CAR007"
-        },
         "1003": {
             "documento": "1003",
             "nombre": "carlos lopez",
@@ -130,6 +123,13 @@
             "celular": "1234567892",
             "correo": "prueba30@gmail.com",
             "cargo": "CAR002"
+        },
+        "33333333": {
+            "documento": "33333333",
+            "nombre": "Valeria",
+            "celular": "1234567895",
+            "correo": "valeria.gon@gmail.com",
+            "cargo": "CAR005"
         }
     }
 }

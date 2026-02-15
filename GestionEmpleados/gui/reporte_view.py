@@ -143,6 +143,18 @@ class ReporteView(ttk.Frame):
                 messagebox.showerror("Error", f"No se pudo guardar:\n{e}")
         return None
 
+    def _guardar_copia_historial(self, contenido, nombre_archivo):
+        """Guarda una copia automática en la carpeta reportes/ para el historial."""
+        try:
+            if not os.path.exists("reportes"):
+                os.makedirs("reportes")
+            
+            ruta = os.path.join("reportes", nombre_archivo)
+            with open(ruta, 'w', encoding='utf-8') as f:
+                f.write(contenido)
+        except Exception as e:
+            print(f"No se pudo guardar copia en historial: {e}")
+
     def generar_reporte_depto(self):
         depto_sel = self.var_depto.get()
         if not depto_sel:
@@ -176,7 +188,14 @@ class ReporteView(ttk.Frame):
         from datetime import datetime
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         nombre = f"reporte_{cod_depto}_{timestamp}.txt"
+        
+        # 1. Guardar donde el usuario quiera
         self._preguntar_guardar(contenido, nombre)
+        
+        # 2. Guardar copia en historial
+        self._guardar_copia_historial(contenido, nombre)
+        
+        # 3. Recargar lista
         self.cargar_reportes_anteriores()
 
     def generar_reporte_general(self):
@@ -203,7 +222,14 @@ class ReporteView(ttk.Frame):
         from datetime import datetime
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         nombre = f"reporte_general_{timestamp}.txt"
+        
+        # 1. Guardar donde el usuario quiera
         self._preguntar_guardar(contenido, nombre)
+        
+        # 2. Guardar copia en historial
+        self._guardar_copia_historial(contenido, nombre)
+        
+        # 3. Recargar lista
         self.cargar_reportes_anteriores()
 
     def _obtener_empleados_depto(self, cod_depto):
