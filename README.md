@@ -32,6 +32,15 @@ Ejercicios que practican el uso de bucles y estructuras de repetición:
 - Manipulación de texto
 - Y más de 20 ejercicios diferentes
 
+### Sistema de Gestión de Empleados
+Ejercicio independiente con menús y patrones de diseño:
+- Registro, modificación y eliminación de empleados
+- Gestión de cargos y departamentos
+- Base de datos en memoria (Singleton) con persistencia JSON
+- Patrones Repository, Factory y Strategy para reportes
+- Reportes generales y por departamento en archivos TXT
+
+
 ## ¿Qué necesitas para ejecutar el proyecto?
 
 ### Requisitos:

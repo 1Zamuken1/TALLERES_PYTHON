@@ -33,6 +33,7 @@ from menus.menu_taller1 import ejecutar_menu_taller_1
 from menus.menu_taller2_banco import ejecutar_menu_taller_2_banco
 from menus.menu_taller2_ciclos import ejecutar_menu_taller_2_ciclos
 from Hotel.Ejercicio22 import ejercicio_sistema_hotel
+from GestionEmpleados.main import sistema_gestion_empleados
 
 
 def diseno_menu_principal():
@@ -54,6 +55,7 @@ def diseno_menu_principal():
     print("║  2. Taller 2 - Cuenta Bancaria     ║")
     print("║  3. Taller 2 - Ciclo for y While   ║")
     print("║  4. Ejercicio Hotel                ║")
+    print("║  5. Gestión de Empleados           ║")
     print("╠════════════════════════════════════╣")
     print("║  0. Salir                          ║")
     print("╚════════════════════════════════════╝")
@@ -80,20 +82,6 @@ def ejecutar_menu_principal():
     
     Returns:
         None
-    
-    Example:
-        >>> ejecutar_menu_principal()
-        ╔════════════════════════════════════╗
-        ║    TALLERES PYTHON                 ║
-        ╠════════════════════════════════════╣
-        ║  1. Taller 1 - Variables           ║
-        ║  2. Taller 2 - Cuenta Bancaria     ║
-        ║  3. Taller 2 - Ciclo for y While   ║
-        ╠════════════════════════════════════╣
-        ║  0. Salir                          ║
-        ╚════════════════════════════════════╝
-        Selecciona una opcion: 3
-        [Accede al menu del Taller 2 - Ciclos]
     """
     # Diccionario que mapea opciones a funciones de menus de talleres
     menu_talleres = {
@@ -101,6 +89,7 @@ def ejecutar_menu_principal():
         "2": ejecutar_menu_taller_2_banco,
         "3": ejecutar_menu_taller_2_ciclos,
         "4": ejercicio_sistema_hotel,
+        "5": sistema_gestion_empleados,
     }
     
     # Mensaje de bienvenida (estética uniforme)
@@ -108,33 +97,33 @@ def ejecutar_menu_principal():
     print("║    BIENVENIDO AL SISTEMA           ║")
     print("╚════════════════════════════════════╝")
     
-    try:
-        while True:
-            diseno_menu_principal()
+    while True:
+        diseno_menu_principal()
+        try:
             opcion = input("Selecciona una opcion: ")
+        except (KeyboardInterrupt, EOFError):
+            # Ctrl+C o fin de entrada, rompemos el bucle con mensaje suave
+            print("\n╔════════════════════════════════════╗")
+            print("║  Entrada cancelada, saliendo...    ║")
+            print("╚════════════════════════════════════╝")
+            break
 
-            if opcion == "0":
-                print("╔════════════════════════════════════╗")
-                print("║  Gracias por usar el sistema       ║")
-                print("║  Hasta pronto!                     ║")
-                print("╚════════════════════════════════════╝")
-                break
+        if opcion == "0":
+            print("╔════════════════════════════════════╗")
+            print("║  Gracias por usar el sistema       ║")
+            print("║  Hasta pronto!                     ║")
+            print("╚════════════════════════════════════╝")
+            break
 
-            # Obtener funcion del diccionario
-            opcion_menu = menu_talleres.get(opcion)
+        # Obtener funcion del diccionario
+        opcion_menu = menu_talleres.get(opcion)
 
-            if opcion_menu:
-                # Llamar a la funcion del taller seleccionado
-                opcion_menu()
-            else:
-                print("\nOpcion no valida. Intenta de nuevo.")
-                input("Presiona Enter para continuar...")
-    except KeyboardInterrupt:
-        # Manejo amigable de Ctrl+C en cualquier input
-        print("\n╔════════════════════════════════════╗")
-        print("║  Ejecución interrumpida por usuario ║")
-        print("║  Saliendo...                        ║")
-        print("╚════════════════════════════════════╝")
+        if opcion_menu:
+            # Llamar a la funcion del taller seleccionado
+            opcion_menu()
+        else:
+            print("\nOpcion no valida. Intenta de nuevo.")
+            input("Presiona Enter para continuar...")
 
 
 # Punto de entrada del programa

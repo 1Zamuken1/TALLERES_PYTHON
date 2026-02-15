@@ -1,0 +1,135 @@
+{
+    "departamentos": {
+        "DEP001": {
+            "codigo": "DEP001",
+            "nombre": "Recursos Humanos"
+        },
+        "DEP002": {
+            "codigo": "DEP002",
+            "nombre": "Vicepresidencia Técnica"
+        },
+        "DEP003": {
+            "codigo": "DEP003",
+            "nombre": "Ventas"
+        }
+    },
+    "cargos": {
+        "CAR001": {
+            "codigo": "CAR001",
+            "nombre": "Gerente de RH",
+            "departamento": "DEP001"
+        },
+        "CAR002": {
+            "codigo": "CAR002",
+            "nombre": "Analista de Seleccion",
+            "departamento": "DEP001"
+        },
+        "CAR003": {
+            "codigo": "CAR003",
+            "nombre": "Coordinador de Nomina",
+            "departamento": "DEP001"
+        },
+        "CAR004": {
+            "codigo": "CAR004",
+            "nombre": "Especialista en Capacitacion",
+            "departamento": "DEP001"
+        },
+        "CAR005": {
+            "codigo": "CAR005",
+            "nombre": "Asistente de RH",
+            "departamento": "DEP001"
+        },
+        "CAR006": {
+            "codigo": "CAR006",
+            "nombre": "Vicepresidente Tecnico",
+            "departamento": "DEP002"
+        },
+        "CAR007": {
+            "codigo": "CAR007",
+            "nombre": "Arquitecto de Software",
+            "departamento": "DEP002"
+        },
+        "CAR008": {
+            "codigo": "CAR008",
+            "nombre": "Desarrollador Senior",
+            "departamento": "DEP002"
+        },
+        "CAR009": {
+            "codigo": "CAR009",
+            "nombre": "Analista de Sistemas",
+            "departamento": "DEP002"
+        },
+        "CAR010": {
+            "codigo": "CAR010",
+            "nombre": "Ingeniero DevOps",
+            "departamento": "DEP002"
+        },
+        "CAR011": {
+            "codigo": "CAR011",
+            "nombre": "Gerente de Ventas",
+            "departamento": "DEP003"
+        },
+        "CAR012": {
+            "codigo": "CAR012",
+            "nombre": "Ejecutivo de Cuentas",
+            "departamento": "DEP003"
+        },
+        "CAR013": {
+            "codigo": "CAR013",
+            "nombre": "Analista de Mercadeo",
+            "departamento": "DEP003"
+        },
+        "CAR014": {
+            "codigo": "CAR014",
+            "nombre": "Representante Comercial",
+            "departamento": "DEP003"
+        },
+        "CAR015": {
+            "codigo": "CAR015",
+            "nombre": "Coordinador de Ventas",
+            "departamento": "DEP003"
+        },
+        "CAR999": {
+            "codigo": "CAR999",
+            "nombre": "Prueba",
+            "departamento": "DEP001"
+        }
+    },
+    "empleados": {
+        "1001": {
+            "documento": "1001",
+            "nombre": "juan perez 5",
+            "celular": "3001234567",
+            "correo": "juan.perez@empresa.com",
+            "cargo": "CAR007"
+        },
+        "1003": {
+            "documento": "1003",
+            "nombre": "carlos lopez",
+            "celular": "3009876543",
+            "correo": "carlos.lopez@empresa.com",
+            "cargo": "CAR006"
+        },
+        "1004": {
+            "documento": "1004",
+            "nombre": "maria rodriguez",
+            "celular": "3005551234",
+            "correo": "maria.rodriguez@empresa.com",
+            "cargo": "CAR008"
+        },
+        "1005": {
+            "documento": "1005",
+            "nombre": "pedro sanchez",
+            "celular": "3005559876",
+            "correo": "pedro.sanchez@empresa.com",
+            "cargo": "CAR011"
+        },
+        "222222": {
+            "documento": "222222",
+            "nombre": "Prueba 30 - Interfaz",
+            "celular": "1234567892",
+            "correo": "prueba30@gmail.com",
+            "cargo": "CAR002"
+        }
+    }
+}
