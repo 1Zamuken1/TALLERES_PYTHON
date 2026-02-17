@@ -1,0 +1,90 @@
+[
+    {
+        "nombre": "Laptop Dell XPS 13",
+        "codigo": 1001,
+        "tipo_producto": 2,
+        "tipo_flete": 2,
+        "cantidad": 15,
+        "costo_sin_iva": 3500000
+    },
+    {
+        "nombre": "Servicio de Consultor\u00eda IT",
+        "codigo": 2001,
+        "tipo_producto": 1,
+        "tipo_flete": 1,
+        "cantidad": 5,
+        "costo_sin_iva": 2000000
+    },
+    {
+        "nombre": "Mouse Logitech MX Master 3",
+        "codigo": 1002,
+        "tipo_producto": 2,
+        "tipo_flete": 2,
+        "cantidad": 50,
+        "costo_sin_iva": 150000
+    },
+    {
+        "nombre": "Teclado Mec\u00e1nico Keychron K2",
+        "codigo": 1003,
+        "tipo_producto": 2,
+        "tipo_flete": 2,
+        "cantidad": 30,
+        "costo_sin_iva": 250000
+    },
+    {
+        "nombre": "Monitor Samsung 27\" 4K",
+        "codigo": 1004,
+        "tipo_producto": 2,
+        "tipo_flete": 1,
+        "cantidad": 20,
+        "costo_sin_iva": 1200000
+    },
+    {
+        "nombre": "Servicio de Mantenimiento Anual",
+        "codigo": 2002,
+        "tipo_producto": 1,
+        "tipo_flete": 1,
+        "cantidad": 10,
+        "costo_sin_iva": 500000
+    },
+    {
+        "nombre": "Auriculares Sony WH-1000XM5",
+        "codigo": 1005,
+        "tipo_producto": 2,
+        "tipo_flete": 2,
+        "cantidad": 25,
+        "costo_sin_iva": 800000
+    },
+    {
+        "nombre": "Webcam Logitech Brio 4K",
+        "codigo": 1006,
+        "tipo_producto": 2,
+        "tipo_flete": 2,
+        "cantidad": 40,
+        "costo_sin_iva": 450000
+    },
+    {
+        "nombre": "Servicio de Soporte T\u00e9cnico",
+        "codigo": 2003,
+        "tipo_producto": 1,
+        "tipo_flete": 1,
+        "cantidad": 8,
+        "costo_sin_iva": 300000
+    },
+    {
+        "nombre": "Escritorio El\u00e9ctrico Ajustable",
+        "codigo": 1007,
+        "tipo_producto": 2,
+        "tipo_flete": 1,
+        "cantidad": 12,
+        "costo_sin_iva": 1500000
+    },
+    {
+        "nombre": "Gastu",
+        "codigo": 999,
+        "tipo_producto": 1,
+        "tipo_flete": 1,
+        "cantidad": 1,
+        "costo_sin_iva": 100000.0
+    }
+]

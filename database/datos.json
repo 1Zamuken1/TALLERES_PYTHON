@@ -124,12 +124,12 @@
             "correo": "prueba30@gmail.com",
             "cargo": "CAR002"
         },
-        "33333333": {
-            "documento": "33333333",
-            "nombre": "Valeria",
-            "celular": "1234567895",
-            "correo": "valeria.gon@gmail.com",
-            "cargo": "CAR005"
+        "444444444": {
+            "documento": "444444444",
+            "nombre": "Valeria Gonzalez",
+            "celular": "1234567898",
+            "correo": "valeriagon1423@gmail.com",
+            "cargo": "CAR009"
         }
     }
 }

@@ -32,6 +32,7 @@ Version: 2.0.0
 from menus.menu_taller1 import ejecutar_menu_taller_1
 from menus.menu_taller2_banco import ejecutar_menu_taller_2_banco
 from menus.menu_taller2_ciclos import ejecutar_menu_taller_2_ciclos
+from menus.menu_taller3 import ejecutar_menu_taller3
 from Hotel.Ejercicio22 import ejercicio_sistema_hotel
 from GestionEmpleados.main import sistema_gestion_empleados
 
@@ -56,6 +57,7 @@ def diseno_menu_principal():
     print("║  3. Taller 2 - Ciclo for y While   ║")
     print("║  4. Ejercicio Hotel                ║")
     print("║  5. Gestión de Empleados           ║")
+    print("║  6. Taller 3 - Ejercicios          ║")
     print("╠════════════════════════════════════╣")
     print("║  0. Salir                          ║")
     print("╚════════════════════════════════════╝")
@@ -90,6 +92,7 @@ def ejecutar_menu_principal():
         "3": ejecutar_menu_taller_2_ciclos,
         "4": ejercicio_sistema_hotel,
         "5": sistema_gestion_empleados,
+        "6": ejecutar_menu_taller3,
     }
     
     # Mensaje de bienvenida (estética uniforme)
