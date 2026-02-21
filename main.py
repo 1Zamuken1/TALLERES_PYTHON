@@ -35,6 +35,7 @@ from menus.menu_taller2_ciclos import ejecutar_menu_taller_2_ciclos
 from menus.menu_taller3 import ejecutar_menu_taller3
 from Hotel.Ejercicio22 import ejercicio_sistema_hotel
 from GestionEmpleados.main import sistema_gestion_empleados
+from proyecto.proyecto_datetime import ejercicio_gestion_proyecto
 
 
 def diseno_menu_principal():
@@ -58,6 +59,7 @@ def diseno_menu_principal():
     print("║  4. Ejercicio Hotel                ║")
     print("║  5. Gestión de Empleados           ║")
     print("║  6. Taller 3 - Ejercicios          ║")
+    print("║  7. Gestión de Proyecto            ║")
     print("╠════════════════════════════════════╣")
     print("║  0. Salir                          ║")
     print("╚════════════════════════════════════╝")
@@ -93,6 +95,7 @@ def ejecutar_menu_principal():
         "4": ejercicio_sistema_hotel,
         "5": sistema_gestion_empleados,
         "6": ejecutar_menu_taller3,
+        "7": ejercicio_gestion_proyecto,
     }
     
     # Mensaje de bienvenida (estética uniforme)
