@@ -136,7 +136,7 @@ def ejercicio_gestion_proyecto():
     
     # Mostrar informe
     print("╔══════════════════════════════════════════════════════════╗")
-    print("║          INFORME DE PROYECTO FORMATIVO                  ║")
+    print("║          INFORME DE PROYECTO FORMATIVO                   ║")
     print("╚══════════════════════════════════════════════════════════╝")
     
     print(f"\nProyecto: {nombre_proyecto}")
